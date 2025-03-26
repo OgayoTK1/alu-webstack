@@ -24,11 +24,11 @@ frontend http_front
     default_backend http_back
 
 frontend https_front
-    bind *:443 ssl crt /etc/haproxy/certs/www.ibragold.tech.pem
+    bind *:443 ssl crt /etc/haproxy/certs/www.ogayo.tech.pem
     http-request set-header X-Forwarded-Proto https
     default_backend http_back
 
 backend http_back
     balance roundrobin
-    server 6381-web-01 3.91.204.218:80 check
-    server 6381-web-02 18.212.66.246:80 check
+    server 6478--web-01 3.89.187.146:80 check
+    server 6478-web-02 3.87.190.9:80 check
